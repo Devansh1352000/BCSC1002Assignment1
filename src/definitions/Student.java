@@ -1,5 +1,5 @@
 /*  Created by IntelliJ IDEA.
- *  User: Devansh Shukla (Devansh132000)
+ *  User: Devansh Shukla (Devansh1352000)
  *  Date: 24/08/20
  *  Time: 11:19 PM
  *  File Name : Student.java
@@ -13,6 +13,15 @@ public class Student {
     private long universityRollNumber;
     private int numberOfBooksIssued;
     private Book[] namesOfTheBooksIssued;
+
+    public Student(String firstName, String middleName, String lastName, long universityRollNumber, int numberOfBooksIssued, Book[] namesOfTheBooksIssued) {
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.universityRollNumber = universityRollNumber;
+        this.numberOfBooksIssued = numberOfBooksIssued;
+        this.namesOfTheBooksIssued = namesOfTheBooksIssued;
+    }
 
     public String getFirstName() {
         return firstName;
