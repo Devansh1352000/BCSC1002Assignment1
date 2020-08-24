@@ -40,4 +40,9 @@ public class Book {
     public void setISBNNumber(String ISBNNumber) {
         this.ISBNNumber = ISBNNumber;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Book Name: %s, Author Name: %s, ISBN Number: %s", getBookName(), getAuthorName(), getISBNNumber());
+    }
 }
