@@ -1,10 +1,11 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divyansh Bhardwaj (dbc2201)
- *  Date: 21/08/20
- *  Time: 3:50 PM
+ *  User: Devansh Shukla (Devansh1352000)
+ *  Date: 24/08/20
+ *  Time: 11:40 PM
  *  File Name : Library.java
  * */
 package definitions;
 
 public class Library {
+    private Book[] currentlyAvailableBooks;
 }
