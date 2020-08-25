@@ -77,6 +77,13 @@ public class Student {
         this.namesOfTheBooksIssued = namesOfTheBooksIssued;
     }
 
+    public void printNamesOfBooksIssued() {
+        for (Book bookName : namesOfTheBooksIssued) {
+            System.out.println(bookName);
+
+        }
+    }
+
     @Override
     public String toString() {
         return "Student{" +
