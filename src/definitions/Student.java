@@ -70,7 +70,7 @@ public class Student {
     }
 
     public Book[] getNamesOfTheBooksIssued() {
-        return namesOfTheBooksIssued;
+        return namesOfTheBooksIssued.clone();
     }
 
     public void setNamesOfTheBooksIssued(Book[] namesOfTheBooksIssued) {
