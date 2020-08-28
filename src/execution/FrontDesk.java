@@ -6,6 +6,7 @@
  * */
 package execution;
 
+import definitions.Library;
 import definitions.Student;
 
 import java.util.Scanner;
@@ -20,6 +21,7 @@ public class FrontDesk {
         long universityRollNumberOfStudent = scanner.nextLong();
         int numberOfBooksIssuedByStudent = scanner.nextInt();
         Student studentDetails = new Student(firstNameOfStudent, middleNameOfStudent, lastNameOfStudent, universityRollNumberOfStudent, numberOfBooksIssuedByStudent);
+        Library libraryDetails = new Library();
         int studentInput;
         do {
             System.out.println("-=-=--=-=-\"Welcome To The Front Desk\"-=-=--=-=-");
@@ -32,20 +34,22 @@ public class FrontDesk {
             studentInput = scanner.nextInt();
             switch (studentInput) {
                 case 1 -> {
-                    System.out.println("Enter the name of the book you want to issue: ");
+                    libraryDetails.getCurrentlyAvailableBooks();
+                    System.out.println("Enter the name of the book you want to issue from the currently available books: ");
                     scanner.nextLine();
                     String bookName = scanner.nextLine();
                     System.out.println("You have successfully issued " + bookName + " book.");
+                    studentDetails.setNumberOfBooksIssued(studentDetails.getNumberOfBooksIssued() + 1);
                 }
                 case 2 -> {
                     System.out.println("Enter the name of the book you want to return: ");
                     scanner.nextLine();
                     String bookName = scanner.nextLine();
                     System.out.println("You have successfully returned " + bookName + " book.");
-                    numberOfBooksIssuedByStudent -= 1;
+                    studentDetails.setNumberOfBooksIssued(studentDetails.getNumberOfBooksIssued() - 1);
                 }
                 case 3 -> {
-                    System.out.println("Number Of Books Issued By You Currently ---> " + numberOfBooksIssuedByStudent);
+                    System.out.println("Number Of Books Issued By You Currently ---> " + studentDetails.getNumberOfBooksIssued());
                     System.out.println("Names of Book Issued By You Up Till Now ---> ");
                     studentDetails.printNamesOfBooksIssued();
                 }
